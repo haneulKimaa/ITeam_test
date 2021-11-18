@@ -9,18 +9,20 @@ import UIKit
 
 class JoinSuccessViewController: UIViewController {
 
+    let thisStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     @IBOutlet weak var popupView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         popupView.layer.cornerRadius = 25
         popupView.clipsToBounds = true
-        // view.addSubview(containerView)
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func successBtn(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        //self.dismiss(animated: false, completion: nil)
+        let SettingStartVC = thisStoryboard.instantiateViewController(withIdentifier: "SettingRegionVC")
+        SettingStartVC.modalPresentationStyle = .overFullScreen
+        present(SettingStartVC, animated: false, completion: nil)
     }
     
 

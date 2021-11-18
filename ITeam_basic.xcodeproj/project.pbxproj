@@ -15,6 +15,9 @@
 		086B57722744BEAC00DD649F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086B57702744BEAC00DD649F /* LaunchScreen.storyboard */; };
 		086B577A2744CAFC00DD649F /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B57792744CAFC00DD649F /* JoinViewController.swift */; };
 		086B577C2744F6FA00DD649F /* JoinSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B577B2744F6FA00DD649F /* JoinSuccessViewController.swift */; };
+		08B2C55927469F6C006591F0 /* SettingSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55827469F6C006591F0 /* SettingSuccessViewController.swift */; };
+		08B2C55B2746A169006591F0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55A2746A169006591F0 /* SettingViewController.swift */; };
+		08B2C55D2746C8A8006591F0 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55C2746C8A8006591F0 /* DetailProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		086B57732744BEAC00DD649F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		086B57792744CAFC00DD649F /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		086B577B2744F6FA00DD649F /* JoinSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSuccessViewController.swift; sourceTree = "<group>"; };
+		08B2C55827469F6C006591F0 /* SettingSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSuccessViewController.swift; sourceTree = "<group>"; };
+		08B2C55A2746A169006591F0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		08B2C55C2746C8A8006591F0 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +70,14 @@
 				086B57672744BEAA00DD649F /* SceneDelegate.swift */,
 				086B57692744BEAA00DD649F /* ViewController.swift */,
 				086B57792744CAFC00DD649F /* JoinViewController.swift */,
+				08B2C55A2746A169006591F0 /* SettingViewController.swift */,
 				086B577B2744F6FA00DD649F /* JoinSuccessViewController.swift */,
 				086B576B2744BEAA00DD649F /* Main.storyboard */,
 				086B576E2744BEAC00DD649F /* Assets.xcassets */,
 				086B57702744BEAC00DD649F /* LaunchScreen.storyboard */,
 				086B57732744BEAC00DD649F /* Info.plist */,
+				08B2C55827469F6C006591F0 /* SettingSuccessViewController.swift */,
+				08B2C55C2746C8A8006591F0 /* DetailProfileViewController.swift */,
 			);
 			path = ITeam_basic;
 			sourceTree = "<group>";
@@ -147,7 +156,10 @@
 				086B576A2744BEAA00DD649F /* ViewController.swift in Sources */,
 				086B577C2744F6FA00DD649F /* JoinSuccessViewController.swift in Sources */,
 				086B57662744BEAA00DD649F /* AppDelegate.swift in Sources */,
+				08B2C55927469F6C006591F0 /* SettingSuccessViewController.swift in Sources */,
 				086B577A2744CAFC00DD649F /* JoinViewController.swift in Sources */,
+				08B2C55D2746C8A8006591F0 /* DetailProfileViewController.swift in Sources */,
+				08B2C55B2746A169006591F0 /* SettingViewController.swift in Sources */,
 				086B57682744BEAA00DD649F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

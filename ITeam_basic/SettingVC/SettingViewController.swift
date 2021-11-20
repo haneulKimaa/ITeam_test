@@ -19,10 +19,12 @@ class SettingViewController: UIViewController {
     // 지역 선택 활성화를 위한 변수
     var isRegionON: Bool = true
     
+    
     // 지역 버튼 일괄 관리
     @IBOutlet var regionBtns: [UIButton]!
     // 수식어 버튼 일괄 관리
     @IBOutlet var propertyBtns: [UIButton]!
+    
     
 
     
@@ -111,11 +113,16 @@ class SettingViewController: UIViewController {
         }
         print(isRegionON)
     }
+
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
+        
+        
         // Do any additional setup after loading the view.
     }
     

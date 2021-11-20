@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yr0-Zj-ArY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -744,10 +744,10 @@
             </objects>
             <point key="canvasLocation" x="1742.0289855072465" y="841.74107142857144"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Setting Purpose View Controller-->
         <scene sceneID="eWB-O9-FsV">
             <objects>
-                <viewController id="EWr-Zn-f0A" customClass="SettingViewController" customModule="ITeam_basic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EWr-Zn-f0A" customClass="SettingPurposeViewController" customModule="ITeam_basic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dhf-QO-soa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -798,10 +798,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="-48" minY="0.0" maxX="4" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="포트폴리오">
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle.fill" catalog="system" title="포트폴리오">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purposeBtn:" destination="EWr-Zn-f0A" eventType="touchUpInside" id="m4q-A7-tTl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKo-m2-ZH5">
                                 <rect key="frame" x="20" y="373" width="374" height="35"/>
@@ -812,6 +816,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="공모전">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purposeBtn:" destination="EWr-Zn-f0A" eventType="touchUpInside" id="SRk-KD-a2w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-fn-Fgn">
                                 <rect key="frame" x="20" y="430" width="374" height="35"/>
@@ -822,6 +829,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="해커톤">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purposeBtn:" destination="EWr-Zn-f0A" eventType="touchUpInside" id="KNw-jK-Zri"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS5-WL-uMF">
                                 <rect key="frame" x="20" y="482" width="374" height="35"/>
@@ -832,6 +842,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="창업">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purposeBtn:" destination="EWr-Zn-f0A" eventType="touchUpInside" id="gzs-Cq-naR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU8-UL-zcK">
                                 <rect key="frame" x="20" y="536" width="374" height="35"/>
@@ -842,6 +855,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="기타">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purposeBtn:" destination="EWr-Zn-f0A" eventType="touchUpInside" id="a4b-Gu-xx3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lox-Oe-fvL"/>
@@ -855,6 +871,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="purposeBtns" destination="T3I-MU-N1h" collectionClass="NSMutableArray" id="ZYm-Np-kvz"/>
+                        <outletCollection property="purposeBtns" destination="GKo-m2-ZH5" collectionClass="NSMutableArray" id="iv4-7i-3xr"/>
+                        <outletCollection property="purposeBtns" destination="fPE-fn-Fgn" collectionClass="NSMutableArray" id="zv8-GY-Mzf"/>
+                        <outletCollection property="purposeBtns" destination="WS5-WL-uMF" collectionClass="NSMutableArray" id="tSB-mp-Teg"/>
+                        <outletCollection property="purposeBtns" destination="kU8-UL-zcK" collectionClass="NSMutableArray" id="RTc-Eh-51g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrZ-Kp-CDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1706,7 +1729,6 @@
         <!--Navigation Controller-->
         <scene sceneID="gx3-f6-mqQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-c2-NhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rBP-XB-cht" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dOJ-cH-uAQ">
@@ -1718,6 +1740,7 @@
                         <segue destination="ixe-rQ-ntm" kind="relationship" relationship="rootViewController" id="92V-ir-9PA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXE-c2-NhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4679.7101449275369" y="841.74107142857144"/>
         </scene>
@@ -1726,6 +1749,7 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

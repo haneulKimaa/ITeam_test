@@ -30,6 +30,7 @@ class SettingPurposeViewController: UIViewController {
             if let firstIndex = purposes.firstIndex(of: (sender.titleLabel?.text)!) {
                 if firstIndex == 1 {
                     // 3순위를 2순위로 바꿈
+                    
                 }
                 purposes.remove(at: firstIndex)
                 print(firstIndex)

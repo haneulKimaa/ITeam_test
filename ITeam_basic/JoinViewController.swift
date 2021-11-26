@@ -11,6 +11,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
 
     // 이메일 Textfield
     @IBOutlet weak var emailTF: UITextField!
+    // 비밀번호 Textfield
+    @IBOutlet weak var passwordTF: UITextField!
+    // 닉네임 Textfield
+    @IBOutlet weak var nicknameTF: UITextField!
     // 이메일 view nextBtn
     @IBOutlet weak var emailViewNextBtn: UIButton!
     // 이메일 인증 확인 멘트 label
@@ -18,14 +22,27 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     let thisStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         DispatchQueue.main.async {
-            if let email = self.emailViewNextBtn  {
-                email.isHidden = true
-                email.isEnabled = false
+            if let emailBtn = self.emailViewNextBtn  {
+                emailBtn.isHidden = true
+                emailBtn.isEnabled = false
             }
             if let label = self.emailVFLabel  {
                 label.isHidden = true
             }
+            
+            // textfield 좌측 공백
+            if let email = self.emailTF {
+                email.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
+            }
+            if let password = self.passwordTF {
+                password.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
+            }
+            if let nickname = self.nicknameTF {
+                nickname.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
+            }
+            
         }
 
         // Do any additional setup after loading the view.

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yr0-Zj-ArY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eAO-cH-kTr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,7 +75,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   이메일 주소" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-5x-IQ8">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 주소" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-5x-IQ8">
                                 <rect key="frame" x="20" y="239" width="353" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -188,7 +189,7 @@
                                     <segue destination="pg9-cG-HSb" kind="show" id="pKF-eE-EXE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-r2-IAm">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQD-r2-IAm">
                                 <rect key="frame" x="18" y="178" width="353" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -210,6 +211,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTF" destination="mQD-r2-IAm" id="XDn-3Y-dtS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6h-HD-Awu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,14 +254,14 @@
                                     <action selector="showPopupViewBtn:" destination="Xg4-dM-jXn" eventType="touchUpInside" id="Tr7-YT-otw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   파트" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihT-5s-job">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="파트" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihT-5s-job">
                                 <rect key="frame" x="20" y="189" width="353" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   세부 포지션" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTB-iW-V1n">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="세부 포지션" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTB-iW-V1n">
                                 <rect key="frame" x="20" y="237" width="353" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -309,7 +313,7 @@
                                     <segue destination="Xg4-dM-jXn" kind="show" id="ai1-9M-66y"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   닉네임" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFs-qs-48K">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFs-qs-48K">
                                 <rect key="frame" x="18" y="175" width="353" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -338,6 +342,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nicknameTF" destination="bFs-qs-48K" id="yT3-X9-dxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WdK-yG-UIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -389,6 +396,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPF-bD-svb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4707" y="151"/>
+        </scene>
+        <!--Agora View Controller-->
+        <scene sceneID="cKX-mw-eY1">
+            <objects>
+                <viewController id="EPm-da-wkU" customClass="AgoraViewController" customModule="ITeam_basic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vjl-Qy-883">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-HT-sFm">
+                                <rect key="frame" x="107" y="446" width="200" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="EPm-da-wkU" eventType="editingDidEnd" id="2gW-4s-EnC"/>
+                                    <outlet property="delegate" destination="EPm-da-wkU" id="3CM-cS-JnS"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaU-qV-bI2">
+                                <rect key="frame" x="138" y="549" width="138" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="통화 시작">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="joinChannel:" destination="EPm-da-wkU" eventType="touchUpInside" id="brR-50-l0M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQd-cC-j7J">
+                                <rect key="frame" x="186" y="388" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eBI-MZ-erb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EM8-xP-Kf4"/>
+                    <connections>
+                        <outlet property="channelButton" destination="WaU-qV-bI2" id="W9z-yy-zDV"/>
+                        <outlet property="nameLabel" destination="TQd-cC-j7J" id="XoL-Nt-1Pt"/>
+                        <outlet property="nameTextField" destination="ekh-HT-sFm" id="a0n-Yc-ftp"/>
+                        <segue destination="Mog-jr-wdo" kind="show" identifier="showChannelViewController" id="kdf-zh-XZZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMU-69-IYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6520.289855072464" y="169.41964285714286"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="09P-XM-iBD">
@@ -800,7 +861,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="-48" minY="0.0" maxX="4" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle.fill" catalog="system" title="포트폴리오">
+                                <buttonConfiguration key="configuration" style="plain" title="포트폴리오">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1744,12 +1805,124 @@
             </objects>
             <point key="canvasLocation" x="4679.7101449275369" y="841.74107142857144"/>
         </scene>
+        <!--Channel View Controller-->
+        <scene sceneID="RKF-JS-w2i">
+            <objects>
+                <viewController id="Mog-jr-wdo" customClass="ChannelViewController" customModule="ITeam_basic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3e9-1G-jGA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYV-Cg-sgF">
+                                <rect key="frame" x="138" y="560" width="138" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나가기">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="leaveChannel:" destination="Mog-jr-wdo" eventType="touchUpInside" id="Q0y-oa-Kjk"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rsA-mW-ZqD">
+                                <rect key="frame" x="20" y="251" width="352" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0tc-Uw-myn">
+                                    <size key="itemSize" width="352" height="127"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="afI-qo-6uj" customClass="UserCollectionViewCell" customModule="ITeam_basic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="352" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mDP-Vz-1cP">
+                                            <rect key="frame" x="0.0" y="0.0" width="352" height="127"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tK2-wj-3vh">
+                                                    <rect key="frame" x="8" y="25" width="80" height="77.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="8fS-Pj-Dct"/>
+                                                        <constraint firstAttribute="height" constant="80" id="iQG-lE-cfc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tK2-wj-3vh" firstAttribute="centerY" secondItem="mDP-Vz-1cP" secondAttribute="centerY" id="BXI-v3-Hog"/>
+                                                <constraint firstAttribute="trailing" secondItem="tK2-wj-3vh" secondAttribute="trailing" constant="264" id="YFg-PA-oAJ"/>
+                                                <constraint firstItem="tK2-wj-3vh" firstAttribute="leading" secondItem="mDP-Vz-1cP" secondAttribute="leadingMargin" id="hlV-JF-UYR"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="352" height="127"/>
+                                        <connections>
+                                            <outlet property="profileImage" destination="tK2-wj-3vh" id="SNj-Zh-cFk"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChannelSectionHeader" id="fGC-n6-uwE" customClass="ChannelSectionHeader" customModule="ITeam_basic" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="동구밭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apx-P1-O3y">
+                                            <rect key="frame" x="16" y="15" width="328" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="apx-P1-O3y" id="xb0-bh-du6"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mog-jr-wdo" id="T4v-UU-6tX"/>
+                                    <outlet property="delegate" destination="Mog-jr-wdo" id="4C7-Tj-Bdm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SKF-tz-fcB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ijg-VQ-Rhz"/>
+                    <connections>
+                        <outlet property="collection" destination="rsA-mW-ZqD" id="qwp-B8-ff9"/>
+                        <outlet property="leaveButton" destination="hYV-Cg-sgF" id="ovH-gp-X94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdR-JF-xuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7202.898550724638" y="168.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nep-zM-sie">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAO-cH-kTr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EwO-N0-9f7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EPm-da-wkU" kind="relationship" relationship="rootViewController" id="VLn-on-bz0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZ0-mW-An6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5610.144927536232" y="169.41964285714286"/>
+        </scene>
     </scenes>
     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1765,6 +1938,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

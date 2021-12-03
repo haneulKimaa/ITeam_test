@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0823F144275746C000DC5DC0 /* CallManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0823F143275746C000DC5DC0 /* CallManageViewController.swift */; };
 		086B57662744BEAA00DD649F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B57652744BEAA00DD649F /* AppDelegate.swift */; };
 		086B57682744BEAA00DD649F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B57672744BEAA00DD649F /* SceneDelegate.swift */; };
 		086B576A2744BEAA00DD649F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B57692744BEAA00DD649F /* ViewController.swift */; };
@@ -25,9 +26,14 @@
 		08B2C55927469F6C006591F0 /* SettingSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55827469F6C006591F0 /* SettingSuccessViewController.swift */; };
 		08B2C55B2746A169006591F0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55A2746A169006591F0 /* SettingViewController.swift */; };
 		08B2C55D2746C8A8006591F0 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2C55C2746C8A8006591F0 /* DetailProfileViewController.swift */; };
+		08D5AAAA275667B5003BBB19 /* ChannelWaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AAA9275667B5003BBB19 /* ChannelWaitingViewController.swift */; };
+		08D5AAAC27566967003BBB19 /* CallClosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AAAB27566967003BBB19 /* CallClosedViewController.swift */; };
+		08D5AAAE27566A9C003BBB19 /* AddMemberAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5AAAD27566A9C003BBB19 /* AddMemberAlertViewController.swift */; };
+		AFD424EB3B87ABD083F868AE /* Pods_ITeam_basic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36CD2722096DE6FB2E0D0FA /* Pods_ITeam_basic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0823F143275746C000DC5DC0 /* CallManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallManageViewController.swift; sourceTree = "<group>"; };
 		086B57622744BEAA00DD649F /* ITeam_basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITeam_basic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086B57652744BEAA00DD649F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		086B57672744BEAA00DD649F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +54,11 @@
 		08B2C55827469F6C006591F0 /* SettingSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSuccessViewController.swift; sourceTree = "<group>"; };
 		08B2C55A2746A169006591F0 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		08B2C55C2746C8A8006591F0 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
+		08D5AAA9275667B5003BBB19 /* ChannelWaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelWaitingViewController.swift; sourceTree = "<group>"; };
+		08D5AAAB27566967003BBB19 /* CallClosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallClosedViewController.swift; sourceTree = "<group>"; };
+		08D5AAAD27566A9C003BBB19 /* AddMemberAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberAlertViewController.swift; sourceTree = "<group>"; };
 		896C7817F40874573C330D54 /* Pods-ITeam_basic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITeam_basic.debug.xcconfig"; path = "Target Support Files/Pods-ITeam_basic/Pods-ITeam_basic.debug.xcconfig"; sourceTree = "<group>"; };
+		A36CD2722096DE6FB2E0D0FA /* Pods_ITeam_basic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ITeam_basic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDE6194CDDEFBA0A52A4526 /* Pods-ITeam_basic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ITeam_basic.release.xcconfig"; path = "Target Support Files/Pods-ITeam_basic/Pods-ITeam_basic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,12 +67,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD424EB3B87ABD083F868AE /* Pods_ITeam_basic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0823F1412757467B00DC5DC0 /* calling */ = {
+			isa = PBXGroup;
+			children = (
+				086FC84D274FFB5400074D18 /* AgoraViewController.swift */,
+				089BC1292750C56F00A20612 /* ChannelViewController.swift */,
+				089BC14D2751139D00A20612 /* UserCollectionViewCell.swift */,
+				089BC14F2751144100A20612 /* ChannelSectionHeader.swift */,
+				08D5AAA9275667B5003BBB19 /* ChannelWaitingViewController.swift */,
+				08D5AAAB27566967003BBB19 /* CallClosedViewController.swift */,
+				08D5AAAD27566A9C003BBB19 /* AddMemberAlertViewController.swift */,
+			);
+			path = calling;
+			sourceTree = "<group>";
+		};
+		0823F1422757469100DC5DC0 /* callingManage */ = {
+			isa = PBXGroup;
+			children = (
+				0823F143275746C000DC5DC0 /* CallManageViewController.swift */,
+			);
+			path = callingManage;
+			sourceTree = "<group>";
+		};
 		086B57592744BEAA00DD649F = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +147,8 @@
 		089BC1282750C55600A20612 /* callVC */ = {
 			isa = PBXGroup;
 			children = (
-				086FC84D274FFB5400074D18 /* AgoraViewController.swift */,
-				089BC1292750C56F00A20612 /* ChannelViewController.swift */,
-				089BC14D2751139D00A20612 /* UserCollectionViewCell.swift */,
-				089BC14F2751144100A20612 /* ChannelSectionHeader.swift */,
+				0823F1422757469100DC5DC0 /* callingManage */,
+				0823F1412757467B00DC5DC0 /* calling */,
 			);
 			path = callVC;
 			sourceTree = "<group>";
@@ -143,6 +174,7 @@
 		8995B51B8FF3345AB777EDE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A36CD2722096DE6FB2E0D0FA /* Pods_ITeam_basic.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D5AAAA275667B5003BBB19 /* ChannelWaitingViewController.swift in Sources */,
 				086B576A2744BEAA00DD649F /* ViewController.swift in Sources */,
 				086B577C2744F6FA00DD649F /* JoinSuccessViewController.swift in Sources */,
 				086B57662744BEAA00DD649F /* AppDelegate.swift in Sources */,
@@ -272,10 +305,13 @@
 				086B577A2744CAFC00DD649F /* JoinViewController.swift in Sources */,
 				08B2C55D2746C8A8006591F0 /* DetailProfileViewController.swift in Sources */,
 				089BC12A2750C56F00A20612 /* ChannelViewController.swift in Sources */,
+				08D5AAAE27566A9C003BBB19 /* AddMemberAlertViewController.swift in Sources */,
+				0823F144275746C000DC5DC0 /* CallManageViewController.swift in Sources */,
 				08B2C55B2746A169006591F0 /* SettingViewController.swift in Sources */,
 				089BC14E2751139D00A20612 /* UserCollectionViewCell.swift in Sources */,
 				086B57682744BEAA00DD649F /* SceneDelegate.swift in Sources */,
 				089B3CB827496D4D00D1CA4A /* SettingPurposeViewController.swift in Sources */,
+				08D5AAAC27566967003BBB19 /* CallClosedViewController.swift in Sources */,
 				089BC1502751144100A20612 /* ChannelSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ class ChannelViewController: UIViewController {
 
     @IBOutlet weak var leaveButton: UIButton!
     @IBOutlet weak var collection: UICollectionView!
+    let thisStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     // 입장할 때 입력한 이름 받을 변수
     var name: String = ""
     // agoraRTtcKit
@@ -61,7 +62,7 @@ class ChannelViewController: UIViewController {
      }
     // 채널 입장
     func joinChannel() {
-        agkit?.joinChannel(byToken: "0061bc8bc4e2bff4c63a191db9a6fc44cd8IABkvOc5NY/Eey2474ctPlxlVijRgUx9ajW1+UfpMpIlZoYRUgEAAAAAEACpCW2YYT6iYQEAAQBfPqJh", channelId: "haha", info: nil, uid: userID,
+        agkit?.joinChannel(byToken: "0061bc8bc4e2bff4c63a191db9a6fc44cd8IADU0N/x7sNzOArjdiHIf0VBvRLpckkdCHuA+mv7mHmYN5N+wrQAAAAAEADxtVSH/HmnYQEAAQD7eadh", channelId: "testToken1", info: nil, uid: userID,
             joinSuccess: {(_, uid, elapsed) in
             self.userID = uid
             if self.role == .audience {
@@ -146,6 +147,11 @@ extension ChannelViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         return sectionHeader
         
+    }
+    @IBAction func showPopupViewBtn(_ sender: UIButton) {
+        let popupVC = thisStoryboard.instantiateViewController(withIdentifier: "CallClosedVC")
+        popupVC.modalPresentationStyle = .overFullScreen
+        present(popupVC, animated: false, completion: nil)
     }
     
 }
